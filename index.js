@@ -91,7 +91,7 @@ searchBtn.addEventListener("click", function() {
          } else if (phys1 === "Ali AbuRahma" && diag === "carotidArteryStenosis") {
             console.log ("Ali and carotid")
             manipulateArray(phys1, i)
-         } else if ((phys1 != "Ali AbuRahma" && diag === "carotidArteryStenosis") || (phys1 != "Mohammad Eslami" && diag === "carotidArteryStenosis") || (phys1 != "Mohammad Eslami" && diag === "AAA") ){ 
+         } else if ((phys1 != "Ali AbuRahma" && diag === "carotidArteryStenosis") && (phys1 != "Mohammad Eslami" && diag === "carotidArteryStenosis") || (phys1 != "Mohammad Eslami" && diag === "AAA") ){ 
             console.log("everyone else")
             manipulateArray(phys1, i)          
          }
