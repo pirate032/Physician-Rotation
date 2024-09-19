@@ -76,7 +76,7 @@ searchBtn.addEventListener("click", function() {
         console.log("Before Ifs: " + phys1)
         //console.log(phys[1])
         //lastPicked = phys[1]
-        if ((phys1 === "Mohammad Eslami" || phys1 == "Ali AbuRahma") && diag == "carotidArteryStenosis") {
+        if ((phys1 === "Mohammad Eslami" || phys1 === "Ali AbuRahma") && diag === "carotidArteryStenosis") {
             //give consult to phys
             resultsEl.textContent = "The next available physician is: " + phys1
             let tempPhys = physicians.splice(i, 1)  //this should remove the one from the list and return the rest as array
@@ -87,7 +87,7 @@ searchBtn.addEventListener("click", function() {
             phys1= ""
             tempPhys = []
             break        
-         } else if (phys1 === "Mohammad Eslami" && diag == "AAA") {    
+         } else if (phys1 === "Mohammad Eslami" && diag === "AAA") {    
             //give consult to phys
             resultsEl.textContent = "The next available physician is: " + phys1
             let tempPhys = physicians.splice(i, 1)  //this should remove the one from the list and return the rest as array
