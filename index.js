@@ -72,28 +72,40 @@ function manipulateArray(phys, index) {
     console.log("Array after push: ")
     console.log (physicians)
     tempPhys = []
-
+    return True
 }
 
 searchBtn.addEventListener("click", function() {
     let diag = document.getElementById("test").value
     let phys1 = ""
-    
+    let assigned = False
     for (let i=0; i<physicians.length; i++) {
         phys1 = physicians[i]   //name of next physician
         console.log("Before Ifs: " + phys1)
         if (phys1 === "Mohammad Eslami" && diag === "carotidArteryStenosis") {
             console.log("Mo and carotid")
-            manipulateArray(phys1, i)
+            assigned = manipulateArray(phys1, i)
+            if (assigned) {
+                break
+            }
          } else if (phys1 === "Mohammad Eslami" && diag === "AAA") {  
             console.log("Mo and AAA")   
-            manipulateArray(phys1, i)       
+            assigned = manipulateArray(phys1, i)   
+            if (assigned) {
+                break
+            }    
          } else if (phys1 === "Ali AbuRahma" && diag === "carotidArteryStenosis") {
             console.log ("Ali and carotid")
-            manipulateArray(phys1, i)
+            assigned = manipulateArray(phys1, i)
+            if (assigned) {
+                break
+            }
          } else if ((phys1 != "Ali AbuRahma" && diag === "carotidArteryStenosis") && (phys1 != "Mohammad Eslami" && diag === "carotidArteryStenosis") || (phys1 != "Mohammad Eslami" && diag === "AAA") ){ 
             console.log("everyone else")
-            manipulateArray(phys1, i)          
+            assigned = manipulateArray(phys1, i)          
          }
+         if (assigned) {
+            break
+        }
     }
 } )
