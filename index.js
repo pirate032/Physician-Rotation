@@ -100,12 +100,12 @@ searchBtn.addEventListener("click", function() {
             if (assigned) {
                 break
             }
-         } else if ((phys1 != "Ali AbuRahma" && diag === "carotidArteryStenosis") && (phys1 != "Mohammad Eslami" && diag === "carotidArteryStenosis") || (phys1 != "Mohammad Eslami" && diag === "AAA") ){ 
+         } else { 
             console.log("everyone else")
-            assigned = manipulateArray(phys1, i)          
-         }
-         if (assigned) {
-            break
-        }
+            assigned = manipulateArray(phys1, i) 
+            if (assigned) {
+                break
+            }         
+         }  
     }
 } )
