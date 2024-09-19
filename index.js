@@ -78,12 +78,13 @@ searchBtn.addEventListener("click", function() {
         if (lastPicked = 1) {
             console.log('last picked = 1')
             continue        //lastPicked is 1, so physician just got consult - continue to next
-        }else {             //lastPicked is 0, so physician can get consult
+        }else if (lastPicked = 0) {             //lastPicked is 0, so physician can get consult
             console.log("last picked = 0")
             phys.pop()      //remove the number part of the array
             phys.push(1)    //add a new number to array
             console.log(phys[0])
             resultsEl.textContent = "The next available physician is: " + phys[0]
+            break           //finished
         }
     }
 } )
