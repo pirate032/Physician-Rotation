@@ -73,31 +73,31 @@ searchBtn.addEventListener("click", function() {
     //resultsEl.textContent = diag
     for (let i=0; i<physicians.length; i++) {
         console.log(physicians[i])
-        phys1 = physicians[i]
+        phys1 = physicians[i]   //name of next physician
         //console.log(phys[1])
         //lastPicked = phys[1]
-        if ((physicians[i] == "Mohammad Eslami" || physicians[i] == "Ali AbuRahma") && diag == "carotidArteryStenosis") {
+        if ((phys1 == "Mohammad Eslami" || phys1 == "Ali AbuRahma") && diag == "carotidArteryStenosis") {
             //give consult to phys
             resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.slice(1)
+            let tempPhys = physicians.slice(i)  //this should remove the one from the list and return the rest as array
             console.log(tempPhys)
-            physicians.push(tempPhys.toString())
+            tempPhys.push(phys1)    //this should push the one removed to the end of array
             console.log(physicians)
             break        
-         } else if (physicians[i] == "Mohammad Eslami" && diag == "AAA") {    
+         } else if (phys1 == "Mohammad Eslami" && diag == "AAA") {    
             //give consult to phys
             resultsEl.textContent = "The next available physician is: " + phys1
             let tempPhys = physicians.slice(1)
             console.log(tempPhys)
-            physicians.push(tempPhys.toString())
+            tempPhys.push(phys1)
             console.log(physicians)
             break           
          } else {
             //non-special cases
             resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.slice(1)
+            let tempPhys = physicians.slice(i)
             console.log(tempPhys)
-            physicians.push(tempPhys.toString())
+            tempPhys.push(phys1)
             console.log(physicians)
             break           
          }
