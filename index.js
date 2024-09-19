@@ -71,12 +71,15 @@ searchBtn.addEventListener("click", function() {
     let lastPicked = 0
     //resultsEl.textContent = diag
     for (let i=0; i<physicians.length; i++) {
-        //console.log(physicians[i])
+        console.log(physicians[i])
         phys = physicians[i]
+        console.log(phys[1])
         lastPicked = phys[1]
         if (lastPicked = 1) {
+            console.log('last picked = 1')
             continue        //lastPicked is 1, so physician just got consult - continue to next
         }else {             //lastPicked is 0, so physician can get consult
+            console.log("last picked = 0")
             phys.pop()      //remove the number part of the array
             phys.push(1)    //add a new number to array
             console.log(phys[0])
