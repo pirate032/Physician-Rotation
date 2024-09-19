@@ -68,8 +68,19 @@ console.log(physicians)
 searchBtn.addEventListener("click", function() {
     var diag = document.getElementById("test").value
     let phys = []
+    let lastPicked = 0
     //resultsEl.textContent = diag
     for (let i=0; i<physicians.length; i++) {
-        console.log(physicians[i])
+        //console.log(physicians[i])
+        phys = physicians[i]
+        lastPicked = phys[1]
+        if (lastPicked = 1) {
+            continue        //lastPicked is 1, so physician just got consult - continue to next
+        }else {             //lastPicked is 0, so physician can get consult
+            phys.pop()      //remove the number part of the array
+            phys.push(1)    //add a new number to array
+            console.log(phys[0])
+            resultsEl.textContent = "The next available physician is: " + phys[0]
+        }
     }
 } )
