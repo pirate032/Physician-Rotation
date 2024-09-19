@@ -79,8 +79,8 @@ searchBtn.addEventListener("click", function() {
         if ((phys1 == "Mohammad Eslami" || phys1 == "Ali AbuRahma") && diag == "carotidArteryStenosis") {
             //give consult to phys
             resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.slice(i, i+1)  //this should remove the one from the list and return the rest as array
-            console.log("Array after splice: " + tempPhys)
+            let tempPhys = physicians.splice(i, 1)  //this should remove the one from the list and return the rest as array
+            console.log("Array after splice: " + physicians)
             tempPhys.push(phys1)    //this should push the one removed to the end of array
             console.log("Array after push: " + physicians)
             break        
