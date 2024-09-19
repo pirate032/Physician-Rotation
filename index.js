@@ -69,25 +69,25 @@ searchBtn.addEventListener("click", function() {
     let diag = document.getElementById("test").value
     //let phys = []
     let phys1 = ""
-    //et lastPicked = 0
+    //let lastPicked = 0
     //resultsEl.textContent = diag
     for (let i=0; i<physicians.length; i++) {
-        console.log(physicians[i])
         phys1 = physicians[i]   //name of next physician
+        console.log("Before Ifs: " + phys1)
         //console.log(phys[1])
         //lastPicked = phys[1]
         if ((phys1 == "Mohammad Eslami" || phys1 == "Ali AbuRahma") && diag == "carotidArteryStenosis") {
             //give consult to phys
             resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.slice(i)  //this should remove the one from the list and return the rest as array
-            console.log(tempPhys)
+            let tempPhys = physicians.slice(i, i+1)  //this should remove the one from the list and return the rest as array
+            console.log("Array after splice: " + tempPhys)
             tempPhys.push(phys1)    //this should push the one removed to the end of array
-            console.log(physicians)
+            console.log("Array after push: " + physicians)
             break        
          } else if (phys1 == "Mohammad Eslami" && diag == "AAA") {    
             //give consult to phys
             resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.slice(1)
+            let tempPhys = physicians.slice(i. i+1)
             console.log(tempPhys)
             tempPhys.push(phys1)
             console.log(physicians)
@@ -95,7 +95,7 @@ searchBtn.addEventListener("click", function() {
          } else {
             //non-special cases
             resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.slice(i)
+            let tempPhys = physicians.slice(i, i+1)
             console.log(tempPhys)
             tempPhys.push(phys1)
             console.log(physicians)
