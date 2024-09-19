@@ -51,3 +51,5 @@ searchBtn.addEventListener("click", function() {
     //push(referenceInDB, searchEl.value)
     //inputEl.value = "" 
 })
+
+setPhysicians()
