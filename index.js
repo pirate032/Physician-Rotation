@@ -87,9 +87,9 @@ searchBtn.addEventListener("click", function() {
          } else if (phys1 == "Mohammad Eslami" && diag == "AAA") {    
             //give consult to phys
             resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.slice(i. i+1)
-            console.log(tempPhys)
-            tempPhys.push(phys1)
+            let tempPhys = physicians.splice(i, 1)  //this should remove the one from the list and return the rest as array
+            console.log("Array after splice: " + physicians)
+            physicians.push(phys1)    //this should push the one removed to the end of array
             console.log(physicians)
             break           
          } else {
@@ -98,7 +98,7 @@ searchBtn.addEventListener("click", function() {
             let tempPhys = physicians.slice(i, i+1)
             console.log(tempPhys)
             tempPhys.push(phys1)
-            console.log(physicians)
+            console.log("Array after push: " + physicians)
             break           
          }
     }
