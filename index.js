@@ -17,5 +17,5 @@ console.log(physicians)
 console.log(diagnosesEl)
 
 searchBtn.addEventListener("click", function() {
-    console.log("search clicked")
+    console.log(diagnosesEl.nodeValue)
 })
