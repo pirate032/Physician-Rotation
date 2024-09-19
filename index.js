@@ -64,6 +64,13 @@ let physicians = [
 //     }
 //     diagnosesEl.innerHTML = listItems
 // }
+function manipulateArray(phys) {
+    resultsEl.textContent = "The next available physician is: " + phys
+    let tempPhys = physicians.splice(i, 1)  //this should remove the one from the list and return the rest as array
+    console.log("Array after splice: " + physicians)
+    physicians.push(phys)    //this should push the one removed to the end of array
+    console.log("Array after push: " + physicians)
+}
 
 searchBtn.addEventListener("click", function() {
     let diag = document.getElementById("test").value
@@ -78,37 +85,40 @@ searchBtn.addEventListener("click", function() {
         //lastPicked = phys[1]
         if ((phys1 === "Mohammad Eslami" || phys1 === "Ali AbuRahma") && diag === "carotidArteryStenosis") {
             //give consult to phys
-            resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.splice(i, 1)  //this should remove the one from the list and return the rest as array
-            console.log("Array after splice: " + physicians)
-            physicians.push(phys1)    //this should push the one removed to the end of array
-            console.log("Array after push: " + physicians)
+            //resultsEl.textContent = "The next available physician is: " + phys1
+            //let tempPhys = physicians.splice(i, 1)  //this should remove the one from the list and return the rest as array
+            //console.log("Array after splice: " + physicians)
+            //physicians.push(phys1)    //this should push the one removed to the end of array
+            //console.log("Array after push: " + physicians)
+            manipulateArray(phys1)
             diag = ""
             phys1= ""
             tempPhys = []
-            break        
+             
          } else if (phys1 === "Mohammad Eslami" && diag === "AAA") {    
             //give consult to phys
-            resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.splice(i, 1)  //this should remove the one from the list and return the rest as array
-            console.log("Array after splice: " + physicians)
-            physicians.push(phys1)    //this should push the one removed to the end of array
-            console.log(physicians)
+            //resultsEl.textContent = "The next available physician is: " + phys1
+            //let tempPhys = physicians.splice(i, 1)  //this should remove the one from the list and return the rest as array
+            //console.log("Array after splice: " + physicians)
+            //physicians.push(phys1)    //this should push the one removed to the end of array
+            //console.log(physicians)
+            manipulateArray(phys1)
             diag = ""
             phys1= ""
             tempPhys = []
-            break           
-         } else {
+                      
+         } else { 
             //non-special cases
-            resultsEl.textContent = "The next available physician is: " + phys1
-            let tempPhys = physicians.slice(i, i+1)
-            console.log(tempPhys)
-            tempPhys.push(phys1)
-            console.log("Array after push: " + physicians)
+            //resultsEl.textContent = "The next available physician is: " + phys1
+            //let tempPhys = physicians.slice(i, i+1)
+            //console.log(tempPhys)
+            //tempPhys.push(phys1)
+            //console.log("Array after push: " + physicians)
+            manipulateArray(phys1)
             diag = ""
             phys1= ""
             tempPhys = []
-            break           
+                      
          }
     }
 } )
