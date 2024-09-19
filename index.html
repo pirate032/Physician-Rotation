@@ -9,8 +9,8 @@
   <body>
     <h3>Procedure Request</h3>
 
-    <label for=“Diagnoses”>Referred to:</label>
-    <select id=“Diagnoses”>
+    <label for=“diagnoses-el”>Select Diagnosis:</label>
+    <select id=“diagnoses-el”>
         <option value="None">None</option>
         <option value="AAA">AAA</option>
         <option value="bowHunter">Bow Hunter</option>
@@ -45,12 +45,13 @@
         <option value="williamsSnydrome">Williams Syndrome</option>   
     </select>
     
-    <label for="Result" id="Result">Result</label>
-    <input type="text" id="Result" name="Result">
-    <p id=results>Results</p>
+    <label for="Result" id="result">Result</label>
+    <input type="text" id="result" name="Result">
+    <p id=results-el>Results</p>
 
-    <button type="button" onclick="Function2()";>Search</button>
+    <button id="search-btn">Search</button>
       
+    <script type="module" src="index.js"></script>
   </body>
 
 </html>
