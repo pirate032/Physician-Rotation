@@ -50,6 +50,7 @@ onValue (referenceInDB, function(snapshot) {
 searchBtn.addEventListener("click", function() {
     //push(referenceInDB, searchEl.value)
     //inputEl.value = "" 
+    console.log("search clicked")
 })
 
 setPhysicians()
