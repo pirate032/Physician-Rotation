@@ -14,7 +14,7 @@ let physicians = [
 
 
 searchBtn.addEventListener("click", function() {
-    console.log("search clicked" + diagnosisEl.value)
+    console.log("search clicked")
 })
 
 
