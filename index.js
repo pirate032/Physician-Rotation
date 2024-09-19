@@ -72,13 +72,13 @@ function manipulateArray(phys, index) {
     console.log("Array after push: ")
     console.log (physicians)
     tempPhys = []
-    return True
+    return true
 }
 
 searchBtn.addEventListener("click", function() {
     let diag = document.getElementById("test").value
     let phys1 = ""
-    let assigned = False
+    let assigned = false
     for (let i=0; i<physicians.length; i++) {
         phys1 = physicians[i]   //name of next physician
         console.log("Before Ifs: " + phys1)
