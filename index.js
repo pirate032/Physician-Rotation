@@ -50,7 +50,7 @@ let physicians = [
 // ]
 
 console.log(physicians)
-console.log(diagnosesEl)
+//console.log(diagnosesEl)
 
 // function render(diagnoses) {
 //     let listItems = ""
@@ -67,6 +67,6 @@ console.log(diagnosesEl)
 // }
 
 searchBtn.addEventListener("click", function() {
-    console.log(diagnosesEl).value
+    //console.log(diagnosesEl).value
 })
 
