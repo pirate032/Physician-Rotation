@@ -67,6 +67,7 @@ console.log(physicians)
 // }
 
 searchBtn.addEventListener("click", function() {
-    console.log(test).value
+    var diag = document.getElementById("test").value
+    console.log(diag)
 })
 
