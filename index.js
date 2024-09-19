@@ -66,7 +66,7 @@ console.log(physicians)
 // }
 
 searchBtn.addEventListener("click", function() {
-    var diag = document.getElementById("test").value
+    let diag = document.getElementById("test").value
     let phys = []
     let lastPicked = 0
     //resultsEl.textContent = diag
@@ -75,16 +75,16 @@ searchBtn.addEventListener("click", function() {
         phys = physicians[i]
         console.log(phys[1])
         lastPicked = phys[1]
-        if (lastPicked = 1) {
-            console.log('last picked = 1')
-            continue        //lastPicked is 1, so physician just got consult - continue to next
-        }else if (lastPicked = 0) {             //lastPicked is 0, so physician can get consult
-            console.log("last picked = 0")
-            phys.pop()      //remove the number part of the array
-            phys.push(1)    //add a new number to array
-            console.log(phys[0])
-            resultsEl.textContent = "The next available physician is: " + phys[0]
-            break           //finished
-        }
+        if (lastPicked == 1) {
+             console.log('last picked = 1')
+             continue        
+         } else if (lastPicked == 0) {             
+             console.log("last picked = 0")
+             phys.pop()      
+             phys.push(1)    
+             console.log(phys[0])
+             resultsEl.textContent = "The next available physician is: " + phys[0]
+             break           
+         }
     }
 } )
