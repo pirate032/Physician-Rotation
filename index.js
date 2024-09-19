@@ -100,7 +100,7 @@ searchBtn.addEventListener("click", function() {
             if (assigned) {
                 break
             }
-         } else { 
+         } else if (phys1 !== "Ali AbuRahma" && phys1 !== "Mohammad Eslami") { 
             console.log("everyone else")
             assigned = manipulateArray(phys1, i) 
             if (assigned) {
