@@ -83,6 +83,9 @@ searchBtn.addEventListener("click", function() {
             console.log("Array after splice: " + physicians)
             physicians.push(phys1)    //this should push the one removed to the end of array
             console.log("Array after push: " + physicians)
+            diag = ""
+            phys1= ""
+            tempPhys = []
             break        
          } else if (phys1 == "Mohammad Eslami" && diag == "AAA") {    
             //give consult to phys
@@ -91,6 +94,9 @@ searchBtn.addEventListener("click", function() {
             console.log("Array after splice: " + physicians)
             physicians.push(phys1)    //this should push the one removed to the end of array
             console.log(physicians)
+            diag = ""
+            phys1= ""
+            tempPhys = []
             break           
          } else {
             //non-special cases
@@ -99,6 +105,9 @@ searchBtn.addEventListener("click", function() {
             console.log(tempPhys)
             tempPhys.push(phys1)
             console.log("Array after push: " + physicians)
+            diag = ""
+            phys1= ""
+            tempPhys = []
             break           
          }
     }
