@@ -4,12 +4,12 @@ const resultsEl = document.getElementById("results-el")
 
 //create an array of physician/last consult pairs
 let physicians = [
-    ["Mohammad Eslami",0],
-    ["Ali AbuRahma",0],
-    ["Matthew Beasley",0],
-    ["Andrew Lee",0],
-    ["Catherine Go",0],
-    ["Zach AbuRahma",0]
+    "Mohammad Eslami",
+    "Ali AbuRahma",
+    "Matthew Beasley",
+    "Andrew Lee",
+    "Catherine Go",
+    "Zach AbuRahma"
 ]
 
 //create an array of diagnoses
@@ -48,7 +48,7 @@ let physicians = [
 //         "Williams Syndrome",   
 // ]
 
-console.log(physicians)
+//console.log(physicians)
 
 
 // function render(diagnoses) {
@@ -67,24 +67,39 @@ console.log(physicians)
 
 searchBtn.addEventListener("click", function() {
     let diag = document.getElementById("test").value
-    let phys = []
-    let lastPicked = 0
+    //let phys = []
+    let phys1 = ""
+    //et lastPicked = 0
     //resultsEl.textContent = diag
     for (let i=0; i<physicians.length; i++) {
         console.log(physicians[i])
-        phys = physicians[i]
-        console.log(phys[1])
-        lastPicked = phys[1]
-        if (lastPicked == 1) {
-             console.log('last picked = 1')
-             continue        
-         } else if (lastPicked == 0) {             
-             console.log("last picked = 0")
-             phys.pop()      
-             phys.push(1)    
-             console.log(phys[0])
-             resultsEl.textContent = "The next available physician is: " + phys[0]
-             break           
+        phys1 = physicians[i]
+        //console.log(phys[1])
+        //lastPicked = phys[1]
+        if ((physicians[i] == "Mohammad Eslami" || physicians[i] == "Ali AbuRahma") && diag == "carotidArteryStenosis") {
+            //give consult to phys
+            resultsEl.textContent = "The next available physician is: " + phys1
+            let tempPhys = physicians.slice(1)
+            console.log(tempPhys)
+            physicians.push(tempPhys.toString())
+            console.log(physicians)
+            break        
+         } else if (physicians[i] == "Mohammad Eslami" && diag == "AAA") {    
+            //give consult to phys
+            resultsEl.textContent = "The next available physician is: " + phys1
+            let tempPhys = physicians.slice(1)
+            console.log(tempPhys)
+            physicians.push(tempPhys.toString())
+            console.log(physicians)
+            break           
+         } else {
+            //non-special cases
+            resultsEl.textContent = "The next available physician is: " + phys1
+            let tempPhys = physicians.slice(1)
+            console.log(tempPhys)
+            physicians.push(tempPhys.toString())
+            console.log(physicians)
+            break           
          }
     }
 } )
