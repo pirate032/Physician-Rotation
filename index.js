@@ -1,6 +1,5 @@
 const searchBtn = document.getElementById("search-btn")
 const resultsEl = document.getElementById("results-el")
-const diagnosesEl = document.getElementById("diagnoses-el")
 
 
 //create an array of physician/last consult pairs
@@ -50,7 +49,7 @@ let physicians = [
 // ]
 
 console.log(physicians)
-//console.log(diagnosesEl)
+
 
 // function render(diagnoses) {
 //     let listItems = ""
@@ -68,6 +67,6 @@ console.log(physicians)
 
 searchBtn.addEventListener("click", function() {
     var diag = document.getElementById("test").value
-    console.log(diag)
+    resultsEl.textContent(diag)
 })
 
