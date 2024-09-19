@@ -14,7 +14,7 @@
 // const database = getDatabase(app)
 // const referenceInDB = ref(database, "physicians")
 
-const diagnosisEl = document.getElementById("diagnoses-el").value
+const diagnosisEl = document.getElementById("diagnoses-el")
 const searchBtn = document.getElementById("search-btn")
 console.log(diagnosisEl)
 //create an array of physician/last consult pairs
