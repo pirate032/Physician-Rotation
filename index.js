@@ -67,6 +67,6 @@ console.log(physicians)
 
 searchBtn.addEventListener("click", function() {
     var diag = document.getElementById("test").value
-    resultsEl.textContent(diag)
+    resultsEl.textContent = diag
 })
 
