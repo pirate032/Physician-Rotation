@@ -67,6 +67,9 @@ console.log(physicians)
 
 searchBtn.addEventListener("click", function() {
     var diag = document.getElementById("test").value
-    resultsEl.textContent = diag
-})
-
+    let phys = []
+    //resultsEl.textContent = diag
+    for (let i=0; i<physicians.length; i++) {
+        console.log(physicians[i])
+    }
+} )
