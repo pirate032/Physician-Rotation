@@ -8,11 +8,11 @@ import { getDatabase,
 
 const firebaseConfig = {
    databaseURL: "https://physicianpicker-default-rtdb.firebaseio.com/"
-};
+}
 
 const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
-const referenceInDB = ref(database, "leads")
+const referenceInDB = ref(database, "physicians")
 
 const diagnosisEl = document.getElementById("diagnoses-el").value
 const searchBtn = document.getElementById("search-btn")
