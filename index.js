@@ -1,6 +1,8 @@
 const searchBtn = document.getElementById("search-btn")
+const resultsEl = document.getElementById("results-el")
+const diagnosesEl = document.getElementById("diagnoses-el")
 
-//console.log(diagnosisEl)
+
 //create an array of physician/last consult pairs
 let physicians = [
     ["Mohammad Eslami",0],
@@ -10,12 +12,10 @@ let physicians = [
     ["Catherine Go",0],
     ["Zach AbuRahma",0]
 ]
-console.log(physicians)
 
+console.log(physicians)
+console.log(diagnosesEl)
 
 searchBtn.addEventListener("click", function() {
     console.log("search clicked")
 })
-
-
-
