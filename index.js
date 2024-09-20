@@ -1,5 +1,6 @@
 const searchBtn = document.getElementById("search-btn")
 const resultsEl = document.getElementById("results-el")
+const nameEl = document.getElementById("physName")
 
 
 //create an array of physician/last consult pairs
@@ -65,7 +66,8 @@ let physicians = [
 //     diagnosesEl.innerHTML = listItems
 // }
 function manipulateArray(phys, index) {
-    resultsEl.textContent = "The next available physician is: " + phys
+    resultsEl.textContent = "The next available physician is: "
+    nameEl.textCOntent = phys
     let tempPhys = physicians.splice(index, 1)  //this should remove the one from the list and return the rest as array
     console.log("Array after splice: " + physicians)
     physicians.push(phys)    //this should push the one removed to the end of array

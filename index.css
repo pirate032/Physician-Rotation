@@ -9,7 +9,7 @@ body {
 }
 
 title {
-    text-align: center;
+    justify-content: center;
 }
 
 #search-btn {
@@ -35,5 +35,10 @@ title {
 }
 
 #results-el {
+    font-weight: bold;
+}
+
+#physName {
+    color: #3c096c;
     font-weight: bold;
 }
