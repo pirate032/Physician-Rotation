@@ -8,11 +8,32 @@ body {
     justify-content: center;
 }
 
+title {
+    text-align: center;
+}
+
 #search-btn {
     background-color: #1d3557;
     color: #a8dadc;
     border: 1px solid #a8dadc;
     padding: 10px 20px;
     border-radius: 5px;
+    font-weight: bold;
+}
+
+#test-label {
+    margin-bottom: 5px;
+}
+
+#test {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#search-btn {
+    margin-top: 10px;
+}
+
+#results-el {
     font-weight: bold;
 }
