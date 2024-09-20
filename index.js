@@ -67,7 +67,7 @@ let physicians = [
 // }
 function manipulateArray(phys, index) {
     resultsEl.textContent = "The next available physician is: "
-    nameEl.textCOntent = phys
+    nameEl.textContent = phys
     let tempPhys = physicians.splice(index, 1)  //this should remove the one from the list and return the rest as array
     console.log("Array after splice: " + physicians)
     physicians.push(phys)    //this should push the one removed to the end of array
