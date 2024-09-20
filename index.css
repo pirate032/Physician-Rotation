@@ -12,6 +12,19 @@ title {
     justify-content: center;
 }
 
+h3 {
+    text-align: center;
+}
+
+form {
+    justify-content: center;
+}
+
+select {
+    background-color: #f1faee;
+    border: 2px solid #1d3557;
+}
+
 #search-btn {
     background-color: #1d3557;
     color: #a8dadc;
@@ -42,9 +55,11 @@ title {
 
 #results-el {
     font-weight: bold;
+    margin-top: 20px;
 }
 
 #physName {
     color: #3c096c;
     font-weight: bold;
+    margin-top: 0px;
 }
