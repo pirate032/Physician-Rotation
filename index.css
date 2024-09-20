@@ -1,0 +1,18 @@
+body {
+    background-color: #a8dadc;
+    color: #1d3557;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 302px;
+    justify-content: center;
+}
+
+#search-btn {
+    background-color: #1d3557;
+    color: #a8dadc;
+    border: 1px solid #a8dadc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
