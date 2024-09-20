@@ -18,11 +18,12 @@ h3 {
 
 form {
     justify-content: center;
+    align-items: center;
 }
 
 select {
     background-color: #f1faee;
-    border: 2px solid #1d3557;
+    border: 1px solid #1d3557;
 }
 
 #search-btn {
