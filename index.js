@@ -10,7 +10,8 @@ let physicians = [
     "Matthew Beasley",
     "Andrew Lee",
     "Catherine Go",
-    "Zach AbuRahma"
+    "Zach AbuRahma",
+    "Adham Abou-Ali"
 ]
 
 //create an array of diagnoses
